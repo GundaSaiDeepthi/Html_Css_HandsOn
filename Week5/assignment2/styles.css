@@ -1,0 +1,40 @@
+ body{
+            margin:0;
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+        }
+        
+        .container{
+              
+              margin: auto;
+              background-color: white;
+              
+        }
+        h2 {
+              margin-top: 20px;
+        }
+        .content{
+             display: flex;
+             justify-content: space-between;
+             align-items: flex-start;
+        }
+        .text{
+              width: 150%;
+        }
+      .image {
+    width: 40%;
+}
+.image img {
+    width: 100%;
+    border-radius: 8px;
+}
+        ol,ul{
+            margin-left:20px;
+        }
+        .footer{
+            margin-top:20px;
+            font-size: 16px;
+        }
+        .line{
+            width:auto;
+        }
