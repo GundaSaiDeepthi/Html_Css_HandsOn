@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #edf2f8;
+  padding: 60px;
+}
+
+/* GRID LAYOUT */
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;   /* no repeat */
+  grid-template-rows: auto auto;
+  gap: 30px;
+}
+
+/* GRID POSITIONING (no span used) */
+.large:first-of-type {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+
+.dark {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+.tall {
+  grid-column: 4 / 5;
+  grid-row: 1 / 3;
+}
+
+.white:not(.tall) {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.navy {
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+}
+
+/* CARD BASE */
+.card {
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* HEADER FLEX */
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.card-header img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.card-header h4 {
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
+/* This styles the Verified Graduate text without targeting span */
+.card-header div :last-child {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* TEXT */
+.card h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.card p {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+/* COLORS */
+.purple {
+  background: #7541c8;
+  color: white;
+}
+
+.dark {
+  background: #48556a;
+  color: white;
+}
+
+.navy {
+  background: #19212e;
+  color: white;
+}
+
+.white {
+  background: white;
+  color: #333;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .testimonials {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tall {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+  }
+
+  .navy {
+    grid-column: 1 / 3;
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+}
